@@ -30,7 +30,7 @@ export const createPost = async (req, res) => {
 
     } catch (error) {
         console.log("Error in createPost controller:", error.message);
-        res.status(500).json({ error: error.message });
+        res.status(500).json({ error: "Internal server error" });
     }
 };
 
@@ -54,7 +54,7 @@ export const deletePost = async (req, res) => {
 
     } catch (error) {
         console.log("Error in deletePost controller:", error.message);
-        res.status(500).json({ error: error.message });
+        res.status(500).json({ error: "Internal server error" });
     }
 };
 
@@ -81,7 +81,7 @@ export const commentOnPost = async (req, res) => {
 		res.status(200).json(post);
     } catch (error) {
         console.log("Error in commentOnPost controller:", error.message);
-        res.status(500).json({ error: error.message });
+        res.status(500).json({ error: "Internal server error" });
     }
 };
 
@@ -121,7 +121,7 @@ export const likeUnlikePost = async (req, res) => {
 		}
 	} catch (error) {
 		console.log("Error in likeUnlikePost controller:", error.message);
-		res.status(500).json({ error: error.message });
+		res.status(500).json({ error: "Internal server error" });
 	}
 };
 
@@ -147,7 +147,7 @@ export const getAllPosts = async (req, res) => {
 
 	} catch (error) {
 		console.log("Error in getAllPosts controller:", error.message);
-		res.status(500).json({ error: error.message });
+		res.status(500).json({ error: "Internal server error" });
 	}
 };
 
@@ -171,7 +171,7 @@ export const getLikedPosts = async (req, res) => {
 		res.status(200).json(likedPosts);
 	} catch (error) {
 		console.log("Error in getLikedPosts controller:", error.message);
-		res.status(500).json({ error: error.message });
+		res.status(500).json({ error: "Internal server error" });
 	}
 };
 
@@ -197,7 +197,7 @@ export const getFollowingPosts = async (req, res) => {
 		res.status(200).json(feedPosts);
 	} catch (error) {
 		console.log("Error in getFollowingPosts controller:", error.message);
-		res.status(500).json({ error: error.message });
+		res.status(500).json({ error: "Internal server error" });
 	}
 };
 
@@ -222,6 +222,6 @@ export const getUserPosts = async (req, res) => {
 		res.status(200).json(posts);
 	} catch (error) {
 		console.log("Error in getUserPosts controller:", error);
-		res.status(500).json({ error: error.message });
+		res.status(500).json({ error: "Internal server error" });
 	}
 };
